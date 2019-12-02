@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import moment from 'moment';
 
 import { api } from './constants';
 
@@ -44,7 +45,7 @@ function Schedule(props) {
                 <tr key={appointment.id}>
                   <td>{i + 1}</td>
                   <td>{appointment.patient ? appointment.patient.name : "Unknown"}</td>
-                  <td>{new Date(appointment.time).toLocaleString()}</td>
+                  <td>{moment(new Date(appointment.time)).format('h:mm a')}</td>
                   <td>{appointment.reason}</td>
                 </tr>
               ))
