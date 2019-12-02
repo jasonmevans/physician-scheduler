@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 const DB = require('./DB.json');
 
 app.get('/api/physicians', (req, res) => {
-  res.json({});
+  res.json(DB.physicians);
 });
 
 app.get('/api/physician/:physId/schedule', (req, res) => {
