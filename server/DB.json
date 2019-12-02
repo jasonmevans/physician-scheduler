@@ -1,0 +1,39 @@
+{
+  "physicians": [
+    {
+      "id": 1,
+      "name": "Julius Hibbert"
+    },
+    {
+      "id": 2,
+      "name": "Algernon Krieger"
+    },
+    {
+      "id": 3,
+      "name": "Nick Riviera"
+    }
+  ],
+  "patients": [
+    {
+      "id": 1,
+      "name": "Sterling Archer"
+    },
+    {
+      "id": 2,
+      "name": "Cyril Figis"
+    },
+    {
+      "id": 3,
+      "name": "Ray Gilette"
+    },
+    {
+      "id": 4,
+      "name": "Lana Kane"
+    },
+    {
+      "id": 5,
+      "name": "Pam Poovey"
+    }
+  ],
+  "schedule": []
+}

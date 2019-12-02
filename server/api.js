@@ -8,6 +8,8 @@ app.use((req, res, next) => {
   next();
 })
 
+const DB = require('./DB.json');
+
 app.get('/api/physicians', (req, res) => {
   res.json({});
 });
