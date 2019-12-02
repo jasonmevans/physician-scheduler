@@ -11,11 +11,29 @@ app.use((req, res, next) => {
 const DB = require('./DB.json');
 
 app.get('/api/physicians', (req, res) => {
-  res.json(DB.physicians);
+  res.json(Object.keys(DB.physicians).map(k => {
+    return {
+      ...DB.physicians[k],
+      id: k
+    }
+  }));
 });
 
 app.get('/api/physician/:physId/schedule', (req, res) => {
-  res.json([]);
+  const schedule = Object.keys(DB.schedule).reduce((sched, item) => {
+    const { id, physician, patient } = DB.schedule[item]; // eslint-disable-line
+    return [
+      ...sched,
+      {
+        ...DB.schedule[item],
+        patient: DB.patients[patient],
+        physician: DB.physicians[physician],
+        id: item
+      }
+    ];
+  }, []);
+
+  res.json(schedule);
 });
 
 app.listen(port, () => console.log(`Listening on ${port}`));
