@@ -20,18 +20,20 @@ app.get('/api/physicians', (req, res) => {
 });
 
 app.get('/api/physician/:physId/schedule', (req, res) => {
-  const schedule = Object.keys(DB.schedule).reduce((sched, item) => {
-    const { id, physician, patient } = DB.schedule[item]; // eslint-disable-line
-    return [
-      ...sched,
-      {
-        ...DB.schedule[item],
-        patient: DB.patients[patient],
-        physician: DB.physicians[physician],
-        id: item
-      }
-    ];
-  }, []);
+  const schedule = Object.keys(DB.schedule)
+    .filter(item => DB.schedule[item].physician === parseInt(req.params.physId))
+    .reduce((sched, item) => {
+      const { id, physician, patient } = DB.schedule[item]; // eslint-disable-line
+      return [
+        ...sched,
+        {
+          ...DB.schedule[item],
+          patient: DB.patients[patient],
+          physician: DB.physicians[physician],
+          id: item
+        }
+      ];
+    }, []);
 
   res.json(schedule);
 });
