@@ -2,38 +2,77 @@
   "physicians": [
     {
       "id": 1,
-      "name": "Julius Hibbert"
+      "name": "Julius Hibbert",
+      "email": "hibbert@notablehealth.com"
     },
     {
       "id": 2,
-      "name": "Algernon Krieger"
+      "name": "Algernon Krieger",
+      "email": "krieger@notablehealth.com"
     },
     {
       "id": 3,
-      "name": "Nick Riviera"
+      "name": "Nick Riviera",
+      "email": "riviera@notablehealth.com"
     }
   ],
   "patients": [
     {
       "id": 1,
-      "name": "Sterling Archer"
+      "name": "Sterling Archer",
+      "email": "sterling@isis.com"
     },
     {
       "id": 2,
-      "name": "Cyril Figis"
+      "name": "Cyril Figis",
+      "email": "cyril@isis.com"
     },
     {
       "id": 3,
-      "name": "Ray Gilette"
+      "name": "Ray Gilette",
+      "email": "ray@isis.com"
     },
     {
       "id": 4,
-      "name": "Lana Kane"
+      "name": "Lana Kane",
+      "email": "lana@isis.com"
     },
     {
       "id": 5,
-      "name": "Pam Poovey"
+      "name": "Pam Poovey",
+      "email": "pam@isis.com"
     }
   ],
-  "schedule": []
+  "schedule": [
+    {
+      "physician": 2,
+      "patient": 1,
+      "time": 1575323280911,
+      "reason": "New Patient"
+    },
+    {
+      "physician": 2,
+      "patient": 2,
+      "time": 1575323280911,
+      "reason": "Follow-up"
+    },
+    {
+      "physician": 2,
+      "patient": 3,
+      "time": 1575323280911,
+      "reason": "Follow-up"
+    },
+    {
+      "physician": 2,
+      "patient": 4,
+      "time": 1575323280911,
+      "reason": "New Patient"
+    },
+    {
+      "physician": 2,
+      "patient": 5,
+      "time": 1575323280911,
+      "reason": "New Patient"
+    }
+  ]
 }

@@ -15,7 +15,7 @@ app.get('/api/physicians', (req, res) => {
 });
 
 app.get('/api/physician/:physId/schedule', (req, res) => {
-  res.json({});
+  res.json([]);
 });
 
 app.listen(port, () => console.log(`Listening on ${port}`));

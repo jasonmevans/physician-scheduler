@@ -8,6 +8,11 @@
   width: 100vw;
 }
 
+.app--left-pane,
+.app--right-pane {
+  text-align: left;
+}
+
 .app--left-pane {
   background-color: #ddd;
 }
