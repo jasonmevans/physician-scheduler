@@ -8,4 +8,12 @@ app.use((req, res, next) => {
   next();
 })
 
+app.get('/api/physicians', (req, res) => {
+  res.json({});
+});
+
+app.get('/api/physician/:physId/schedule', (req, res) => {
+  res.json({});
+});
+
 app.listen(port, () => console.log(`Listening on ${port}`));
